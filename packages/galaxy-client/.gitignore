@@ -1,0 +1,17 @@
+# Editor-specific
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+.settings
+.vscode
+
+# Installed libs
+node_modules/
+typings/
+
+# Generated
+dist/
+
+# Misc
+npm-debug.log

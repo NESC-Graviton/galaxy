@@ -9,6 +9,7 @@
 # Installed libs
 node_modules/
 typings/
+.rpt2_cache/
 
 # Generated
 dist/

@@ -1,3 +1,7 @@
-import { _trackPageview } from './_trackPageview';
+import { Event } from 'entities';
 
-_trackPageview();
+declare const _gaq: any[][];
+
+(function (_gaq: any[][] = []) {
+
+}(_gaq));

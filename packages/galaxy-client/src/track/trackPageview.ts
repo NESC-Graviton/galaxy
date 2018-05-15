@@ -1,4 +1,4 @@
-export function _trackPageview() {
+export function trackPageview() {
     const params = {} as any;
 
     if (document) {

@@ -1,22 +1,22 @@
-export function trackPageview() {
-    const params = {} as any;
+export function getPageviewData() {
+    const data = {} as any;
 
     if (document) {
-        params.domain = document.domain || '';
-        params.url = document.URL || '';
-        params.title = document.title || '';
-        params.referrer = document.referrer || '';
+        data.domain = document.domain || '';
+        data.url = document.URL || '';
+        data.title = document.title || '';
+        data.referrer = document.referrer || '';
     }
 
     if (window && window.screen) {
-        params.sh = window.screen.height || 0;
-        params.sw = window.screen.width || 0;
-        params.cd = window.screen.colorDepth || 0;
+        data.sh = window.screen.height || 0;
+        data.sw = window.screen.width || 0;
+        data.cd = window.screen.colorDepth || 0;
     }
 
     if (navigator) {
-        params.lang = navigator.language || '';
+        data.lang = navigator.language || '';
     }
 
-    console.log(JSON.stringify(params));
+    return data;
 }

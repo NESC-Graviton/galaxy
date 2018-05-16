@@ -1,8 +1,8 @@
 export interface EventDescriptor {
-    category: string;
+    category?: 'global' | 'default' | string;
     action: string;
     userId?: string;
     time?: number;
     pageUrl?: string;
-    params?: any;
+    payload?: any;
 }

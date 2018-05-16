@@ -10,7 +10,9 @@
         "no-shadowed-variable": false,
         "only-arrow-functions": false,
         "space-before-function-paren": false,
-        "interface-name": false
+        "interface-name": false,
+        "no-console": false,
+        "curly": false
     },
     "rulesDirectory": []
 }

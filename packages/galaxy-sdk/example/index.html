@@ -11,7 +11,37 @@
 </head>
 
 <body>
-    <script src="./galaxy.js"></script>
+    <h1>Hello World</h1>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+
+        _gaq.push({
+            category: 'global',
+            action: 'pageView'
+        });
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            // ga.src = ('https:' == document.location.protocol ? 'https://analytics' : 'http://analytics') + '.codinglabs.org/ma.js';
+            ga.src = './galaxy.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+
+        _gaq.push({
+            category: 'default',
+            action: 'save',
+            payload: {
+                totalAmt: 10000,
+                buyer: 'Jake'
+            }
+        })
+    </script>
+
 </body>
 
 </html>

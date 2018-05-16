@@ -7,7 +7,7 @@ import { devConfig, releaseConfig } from './rollup.config';
 const server = browserSync.create();
 
 const paths = {
-    src: 'src/*.ts',
+    src: 'src/**/*.ts',
     dest: 'dist/'
 }
 

@@ -4,7 +4,7 @@ import typescript from 'rollup-plugin-typescript2';
 import uglify from 'rollup-plugin-uglify';
 
 export const devConfig = {
-    input: 'src/main.ts',
+    input: 'src/index.ts',
     output: {
         file: 'dist/galaxy.js',
         format: 'iife',
@@ -18,7 +18,7 @@ export const devConfig = {
 };
 
 export const releaseConfig = {
-    input: 'src/main.ts',
+    input: 'src/index.ts',
     output: {
         file: 'dist/galaxy.min.js',
         format: 'iife',

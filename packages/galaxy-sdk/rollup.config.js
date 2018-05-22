@@ -8,7 +8,7 @@ export const devConfig = {
     output: {
         file: 'dist/galaxy.js',
         format: 'iife',
-        sourcemap: true
+        sourcemap: 'inline'
     },
     plugins: [
         resolve(),
@@ -23,6 +23,21 @@ export const releaseConfig = {
         file: 'dist/galaxy.min.js',
         format: 'iife',
         sourcemap: 'inline'
+    },
+    plugins: [
+        resolve(),
+        commonjs(),
+        typescript(),
+        uglify()
+    ]
+}
+
+export const importCodeConfig = {
+    input: 'src/import_code/async_imoprt.ts',
+    output: {
+        file: 'dist/import.min.js',
+        format: 'iife',
+        sourcemap: false
     },
     plugins: [
         resolve(),

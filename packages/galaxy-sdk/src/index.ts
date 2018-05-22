@@ -1,7 +1,3 @@
-import { EventDescriptor } from 'entities';
-import { startTrack } from './track/index';
+import { init } from './core/index';
 
-declare let _gaq: EventDescriptor[];
-_gaq = _gaq || [];
-
-startTrack(_gaq);
+init();

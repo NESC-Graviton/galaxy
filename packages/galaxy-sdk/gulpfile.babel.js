@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import * as rollup from 'rollup';
 import del from 'del';
 import browserSync from 'browser-sync';
-import { devConfig, releaseConfig } from './rollup.config';
+import { devConfig, releaseConfig, importCodeConfig } from './rollup.config';
 
 const server = browserSync.create();
 
@@ -13,9 +13,15 @@ const paths = {
 
 const clean = () => del(['dist']);
 
-function buildFor(env) {
+function buildFor(target) {
     return () => {
-        const rollupConfig = env === 'dev' ? devConfig : releaseConfig;
+        let rollupConfig;
+        switch (target) {
+            case 'dev': rollupConfig = devConfig; break;
+            case 'release': rollupConfig = releaseConfig; break;
+            case 'import_code': rollupConfig = importCodeConfig; break;
+            default: rollupConfig = releaseConfig;
+        }
         return rollup.rollup({
             input: rollupConfig.input,
             plugins: rollupConfig.plugins
@@ -52,4 +58,8 @@ gulp.task('dev', gulp.series(
 gulp.task('release', gulp.series(
     clean,
     buildFor('release')
+));
+
+gulp.task('import_code', gulp.series(
+    buildFor('import_code')
 ));

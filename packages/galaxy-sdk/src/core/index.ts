@@ -13,8 +13,6 @@ export function init() {
     const gaq = ga[GA_QUEUE];
     const clone = gaq.splice(0, gaq.length);
     gaq.push = handle;
-    Object.freeze(ga);
-    Object.freeze(gaq);
     gaq.push(...clone);
 }
 

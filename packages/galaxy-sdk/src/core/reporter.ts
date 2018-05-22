@@ -3,6 +3,7 @@ import { config } from './config';
 import { stringify } from 'query-string';
 
 export function report(event: EventDescriptor) {
+    sendByImg(event);
     // 优先使用sendBeacon
     if (window.navigator.sendBeacon) {
         sendByBeacon(event);
@@ -30,10 +31,10 @@ function getSrcUrl(event: EventDescriptor) {
     const queryString = stringify(
         {
             ...event,
-            payload: JSON.stringify(event.payload)
+            d: event.d ? JSON.stringify(event.d) : undefined
         }
     );
-    return `${getReportUrl()}/log.gif?${queryString}`;
+    return `${getReportUrl()}/ga.gif?${queryString}`;
 }
 
 // function makeRndString() {

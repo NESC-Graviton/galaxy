@@ -24,12 +24,12 @@ export function trackEvent(...params: any[]) {
     }
 
     const event: EventDescriptor = {
-        action,
-        category,
-        pageUrl: document.URL,
+        a: action,
+        c: category,
+        url: document.URL,
         uid: config.uid,
-        time: Date.now(),
-        payload,
+        t: Date.now(),
+        d: payload
     };
 
     // console.log(event);

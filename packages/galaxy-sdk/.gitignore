@@ -16,3 +16,4 @@ dist/
 
 # Misc
 npm-debug.log
+package-lock.json

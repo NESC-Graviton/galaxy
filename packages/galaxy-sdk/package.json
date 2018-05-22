@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "gulp dev",
         "release": "gulp release",
+        "import_code": "gulp import_code",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
@@ -22,5 +23,9 @@
         "rollup-plugin-typescript2": "^0.13.0",
         "rollup-plugin-uglify": "^3.0.0",
         "typescript": "^2.8.3"
+    },
+    "dependencies": {
+        "@types/query-string": "^5.1.0",
+        "query-string": "^6.1.0"
     }
 }

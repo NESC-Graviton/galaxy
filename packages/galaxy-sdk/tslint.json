@@ -12,7 +12,13 @@
         "space-before-function-paren": false,
         "interface-name": false,
         "no-console": false,
-        "curly": false
+        "curly": false,
+        "array-type": false,
+        "ordered-imports": false,
+        "object-literal-sort-keys": false,
+        "trailing-comma": false,
+        "arrow-parens": false,
+        "no-empty": false
     },
     "rulesDirectory": []
 }

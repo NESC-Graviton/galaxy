@@ -20,8 +20,8 @@ function handle(this: GaQueueElement[][], ...elems: GaQueueElement[]) {
     for (const elem of elems) {
         switch (elem.callee) {
             case 'setUid': config.uid = (elem.params as any)[0]; break;
-            case 'pageView': trackPageView((elem.params as any)[0]); break;
-            case 'track': trackEvent(...(elem.params as any)); break;
+            case 'trackPageView': trackPageView((elem.params as any)[0]); break;
+            case 'trackEvent': trackEvent.apply(null, elem.params); break;
         }
     }
 

@@ -34,6 +34,6 @@ ga.trackPageView();
 * 记录事件：
 
 ```ts
-function trackEvent(action: string, payload: any, category: string = 'default')
+ga.trackEvent(action: string, payload: any, category: string = 'default')
 ```
 

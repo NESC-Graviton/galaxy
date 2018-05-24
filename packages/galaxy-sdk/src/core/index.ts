@@ -21,7 +21,7 @@ function handle(this: GaQueueElement[][], ...elems: GaQueueElement[]) {
         switch (elem.callee) {
             case 'setUid': config.uid = (elem.params as any)[0]; break;
             case 'trackPageView': trackPageView((elem.params as any)[0]); break;
-            case 'trackEvent': trackEvent(...(elem.params as any)); break;
+            case 'trackEvent': trackEvent.apply(null, elem.params); break;
         }
     }
 

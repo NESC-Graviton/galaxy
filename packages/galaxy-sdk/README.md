@@ -28,13 +28,12 @@ ga.setUid(uid:string);
 * 记录当前页面信息：
 
 ```ts
-ga.pageView();
+ga.trackPageView();
 ```
 
 * 记录事件：
 
 ```ts
-ga.track(action:string,payload:any); //若不设置category，则默认category为'default'。
-ga.track(action:string,category:string,payload:any);
+function trackEvent(action: string, payload: any, category: string = 'default')
 ```
 

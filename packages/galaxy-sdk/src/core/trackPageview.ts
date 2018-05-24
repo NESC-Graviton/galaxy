@@ -3,7 +3,7 @@ import { trackEvent } from './trackEvent';
 
 export function trackPageView(data: PageViewData = {}) {
     const payload = { ...getPageviewData(), ...data };
-    trackEvent('pageView', 'global', payload);
+    trackEvent('pageView', payload, 'global');
 }
 
 function getPageviewData() {

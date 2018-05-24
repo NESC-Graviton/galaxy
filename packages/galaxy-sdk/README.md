@@ -6,10 +6,10 @@
 
 ```html
 <script type="text/javascript">
-    !function () { "use strict"; var e, i = "_ga_queue", t = "_ga_config", r = ["setUid", "pageView", "track"]; e = { identifier: "ga", sdk_url: "./galaxy.js", report_url: "localhost:3000" }, window["_ga_identifier"] = e.identifier, window[e.identifier] = window[e.identifier] || function () { for (var e = {}, t = 0, n = r; t < n.length; t++) { var a = n[t]; e[a] = s.bind(e, a) } return e; function s(e) { for (var t = [], r = 1; r < arguments.length; r++)t[r - 1] = arguments[r]; this[i] = this[i] || [], this[i].push({ callee: e, params: t }) } }(), window[t] = e, function (e) { var i = document.createElement("script"); i.type = "text/javascript", i.async = !0, i.src = e.sdk_url; var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(i, t) }(e) }();
+    !function(){"use strict";var e,t="_ga_queue",i="_ga_config",r=["setUid","trackPageView","trackEvent"];e={identifier:"ga",sdk_url:"./galaxy.js",report_url:"localhost:3000"},window["_ga_identifier"]=e.identifier,window[e.identifier]=window[e.identifier]||function(){for(var e={},i=0,n=r;i<n.length;i++){var a=n[i];e[a]=s.bind(e,a)}return e;function s(e){for(var i=[],r=1;r<arguments.length;r++)i[r-1]=arguments[r];this[t]=this[t]||[],this[t].push({callee:e,params:i})}}(),window[i]=e,function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=e.sdk_url;var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(t,i)}(e)}();
 
     ga.setUid('jx02');
-    ga.pageView();
+    ga.trackPageView();
 </script>
 ```
 

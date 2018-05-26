@@ -10,7 +10,10 @@ const paths = {
     dest: 'dist/'
 };
 
-const clean = () => shelljs.rm('-rf', 'dist');
+const clean = done => {
+    shelljs.rm('-rf', 'dist');
+    done();
+};
 
 function buildFor(target) {
     return () => {

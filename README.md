@@ -4,13 +4,10 @@ Galaxy is the analytics system for user behavior
 
 ![Structure](docs/images/structure.png)
 
-# Project Split
+# Children projects
 
-* [galaxy-sdk](packages/galaxy-sdk) The client sdk for galaxy.
-* [galaxy-api](packages/galaxy-api) The api server for galaxy.
-* [galaxy-management](packages/galaxy-management) The web management for galaxy.
+* [galaxy-api](packages/galaxy-api) The backend api fro galaxy.
 
-# Todo List
+* [galaxy-management](packages/galaxy-management) The management paltform to configuration and show reports.
 
-* [ ] 通用上报工具包
-* [ ] 上报 JS SDK
+* [galaxy-sdk](packages/galaxy-sdk) The client data collector.

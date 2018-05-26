@@ -37,3 +37,18 @@ ga.trackPageView();
 ga.trackEvent(action: string, payload: any, category: string = 'default')
 ```
 
+# Develop
+
+```bash
+# Clone the repo
+git clone https://github.com/NESC-Graviton/galaxy
+
+# go to folder
+cd packages/galaxy-sdk
+
+# Install deps
+npm i
+
+# Run dev
+npm run dev
+```
